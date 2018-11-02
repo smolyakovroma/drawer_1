@@ -1,20 +1,24 @@
-//
-//  ViewController.swift
-//  Sketching
-//
-//  Created by Роман Смоляков on 02/11/2018.
-//  Copyright © 2018 Роман Смоляков. All rights reserved.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var drawView: DrawView!
+
+    @IBAction func btnClearAction(_ sender: Any) {
+        drawView.clear()
     }
-
-
+    
+    @IBAction func btnRedAction(_ sender: Any) {
+        drawView.strokeColor = UIColor.red.cgColor
+    }
+    
+    @IBAction func btnBlueAction(_ sender: Any) {
+           drawView.strokeColor = UIColor.blue.cgColor
+    }
+    
+    @IBAction func btnGreenAction(_ sender: Any) {
+        drawView.strokeColor = UIColor.green.cgColor
+    }
 }
 
